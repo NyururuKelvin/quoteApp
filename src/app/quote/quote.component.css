@@ -1,3 +1,5 @@
 div{
     background-image: url('/assets/abstract-background-fluid-design_23-2148569527.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
