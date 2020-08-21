@@ -5,26 +5,19 @@
 </div>
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="container [@quote]='theQuote' "></div>
+    <div class="row form-quote">
         <div class="col-md-6">
             <!-- quote column -->
+            <app-quote-form (sendQuote)="receiveQuote($event)"></app-quote-form>
         </div>
 
         <div class="col-md-6">
-            <div>
-                <!-- quote detail -->
-                <h3>
-                    <!-- Votes -->
-                </h3>
-                <h3>
-                    <!-- Quote -->
-                </h3>
-                <h4>
-                    <!-- Author -->
-                </h4>
-                <p>
-                    <!-- Time Submitted -->
-                </p>
+            <div *ngFor="let kwot of theQuotes; let i = index">
+                <h3 appHighlight *ngIf="kwot.votes === count && kwot.votes>0"> {{ kwot.theQuote }}</h3>
+                <h3 id="{{i}}"> {{ kwot.theQuote }}</h3>
+                <h4 id={{i}}>-{{ kwot.author }}</h4>
+                <p id="{{i}}">~Submitted {{ kwot.timeCreated | timeCount }} days ago~</p>
                 <button>
                     <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                     <span style="font-size: 1.5em; color: darkslategrey;">UpVote</span>
@@ -33,7 +26,7 @@
                     <i class="fa fa-thumbs-down" aria-hidden="true"></i>
                     <span style="font-size: 1.5em; color: crimson;">DownVote</span>
                 </button>
-                <app-quote-detail></app-quote-detail>
+                <app-quote-detail [quote]='kwot' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
             </div>
         </div>
     </div>
