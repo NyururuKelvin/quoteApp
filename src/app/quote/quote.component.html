@@ -14,9 +14,10 @@
 
       <div class="col-md-6">
         <div *ngFor="let kwot of theQuotes; let i = index">
-          <h3 appHighlight *ngIf="kwot.votes === count && kwot.votes>0"> {{ kwot.theQuote }}</h3>
+          <h3 appHighlight *ngIf="kwot.votes === count && kwot.votes > 0"> {{ kwot.theQuote }}</h3>
           <h3 id="{{i}}"> {{ kwot.theQuote }}</h3>
           <h4 id={{i}}>-{{ kwot.author }}</h4>
+          <small id={{i}}>{{ kwot.blogger }}</small>
           <p id="{{i}}">~Submitted {{ kwot.timeCreated | timeCount }} days ago~</p>
           <button>
               <i class="fa fa-thumbs-up" aria-hidden="true"></i>
