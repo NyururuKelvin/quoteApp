@@ -16,7 +16,7 @@ export class QuoteFormComponent implements OnInit {
   getQuotes(get){
     var sendingQuote
     // console.log(get.value);
-    sendingQuote = new Quote(get.value.theQuote,get.value.author,get.value.person,get.value.timeCreated)
+    sendingQuote = new Quote(get.value.theQuote, get.value.author, get.value.person, get.value.timeCreated)
     this.sendQuote.emit(sendingQuote);
     get.reset();//Clears the form after submitting
   }
