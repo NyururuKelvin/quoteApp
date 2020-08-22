@@ -1,3 +1,11 @@
-
-<p>{{ quote.votes }}</p>
-<button class="btn btn-danger" (click)='deleteQuote(true)'>Delete</button>
+<p class="details">
+    Author: {{quote.author}} <br>
+    Posted by: {{quote.blogger}} 
+    </p>
+    <p>Posted {{quote.postingDate|dateCount}}</p>
+    <div class="like">
+      <p id="like" ><span (click)="countLikeclick()"><img class="logo" src="./assets/like.png"/></span> {{clickCounter}}</p>
+      <p id="dislike"><span (click)="countDislikeclick()"><img class="logo" src="./assets/dislike.png"/></span> {{clickCounter1}}</p>
+  
+    </div>
+   <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete</button>
