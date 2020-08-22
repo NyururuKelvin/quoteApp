@@ -1,49 +1,41 @@
-<div class="container-fluid content">
-  <h2 class="heading">QUOTE OF THE DAY</h2>
-</div>
-
 <div class="container-fluid">
-  <div class="container [@quote]='theQuote' ">
-      <div class="row form-quote">
-        <div class="col-md-6">
-          <app-quote-form (sendQuote)="receiveQuote($event)"></app-quote-form>
-        </div>
-        <div class="col-md-6">
-          <div *ngFor="let kwot of theQuotes; let i = index">
-            <h3 appHighlight *ngIf="kwot.votes === count && kwot.votes>0"> {{ kwot.theQuote }} </h3>
-            <h3 id="{{i}}"> {{ kwot.theQuote }} </h3>
-            <h4 id={{i}}>-{{ kwot.author }}</h4>
-            <small id={{i}}>{{ kwot.person }}</small>
-            <p id="{{i}}">~Submitted {{ kwot.timeCreated | timeCount }} days ago~</p>
-            <button>
-              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-              <span style="font-size: 1.5em; color: darkslategrey;" (click)="adding(i)">UpVote</span>
-            </button>
-            <button>
-              <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-              <span style="font-size: 1.5em; color: crimson;" (click)="removing(i)">DownVote</span>
-            </button>
-            <app-quote-details [quote]='kwot' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+  <div class="main">
+    <div class="heading">
+      <h1>QUOTE OF THE DAY</h1>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor='let quote of quotes; let i=index'>
+          <div class="quote" >
+              <h4 id={{i}} appHighlight>{{quote.name}}</h4> 
+              <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+              <button (click)='toggleDetails(i)' class="btn btn-primary">Details</button>
           </div>
         </div>
       </div>
-  </div>
+      <div class="col-md-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      </div>
+    </div>  
+  </div> 
+</div>
   <div class="footer">
       <!-- <div class="footer"> -->
       <div class="footer-text">
         <div class="list-inline">
           <div class="list-inline-item">
-            <a href="https://github.com/AmimoG" target="_blank">
+            <a href="#" target="_blank">
               <i class="fa fa-github fa-2x"></i>
             </a>
           </div>
           <div class="list-inline-item">
-            <a href="https://twitter.com/GilbertAmimo" target="_blank">
+            <a href="#" target="_blank">
               <i class="fa fa-twitter fa-2x"></i>
             </a>
           </div>
           <div class="list-inline-item">
-            <a href="https://www.linkedin.com/in/gilbert-matete-a3b91a141/" target="_blank">
+            <a href="#" target="_blank">
               <i class="fa fa-linkedin fa-2x"></i>
             </a>
           </div>
