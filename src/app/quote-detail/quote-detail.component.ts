@@ -1,4 +1,3 @@
- 
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../quote';
 
@@ -8,19 +7,23 @@ import { Quote } from '../quote';
   styleUrls: ['./quote-detail.component.css']
 })
 export class QuoteDetailComponent implements OnInit {
-
-  @Input() quote:Quote;
-
+  @Input() quote: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 
-  deleteQuote(complete:boolean){
+  quoteDelete(complete:boolean){
     this.isComplete.emit(complete);
   }
+  clickCounter:number=0;
+  clickCounter1:number=0;
 
-  constructor() { 
+  constructor() { }
+
+  ngOnInit(): void {
   }
-
-  ngOnInit() {
-  }
-
+countLikeclick(){
+  this.clickCounter += 1;
+}
+countDislikeclick(){
+  this.clickCounter1 += 1;
+}
 }
