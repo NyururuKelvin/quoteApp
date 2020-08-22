@@ -1,72 +1,48 @@
 import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
-import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
-  styleUrls: ['./quote.component.css'],
-  animations: [
-    
-    trigger('theQuotes', [
-      transition('* => *',[
-        query(':enter', style({ opacity: 0}), {optional: true}),
-
-        query(':enter', stagger('300ms',[
-          animate('.6s ease-in',keyframes([
-            style({opacity:0, transform: 'translateY(-75%)',offset: 0}),
-            style({opacity:.5, transform: 'translateY(35px)',offset: .3}),
-            style({opacity:1, transform: 'translateY(0)',offset: 1}),
-          ]))]),{optional: true}),
-
-          query(':leave', stagger('300ms',[
-            animate('.6s ease-in',keyframes([
-              style({opacity:1, transform: 'translateY(0%)',offset: 0}),
-              style({opacity:.5, transform: 'translateY(35px)',offset: .3}),
-              style({opacity:0, transform: 'translateY(-75%)',offset: 1}),
-            ]))]),{optional: true}),
-      ])
-    ])
-  ]
+  styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  // myQuote : any= {
-  //   id: 1,
-  //   quote: String,
-  //   by: String
-  // }
-
-  theQuotes=[new Quote('If opportunity doesn’t knock, build a door.',"Nyururu Kelvin","Me",new Date(2020,8,20))]
-
-  deleteQuote(isComplete,index) {
-    this.theQuotes.splice(index,1);
+  
+  quotes:Quote[] = [
+    new Quote(1,'The man that hath no music in himself, Nor is not moved with concord of sweet sounds, is fit for treasons, stratagems and spoils.','William Shakespeare',"Nyururu",new Date(2020,8,22),0,0),
+    new Quote(2,'Must is a hard nut to crack, but it has a sweet kernel.','Charles Spurgeon', "Nyururu",new Date(2020,8,22),0,0),
+    new Quote(3,'As a man sow, shall he reap. and I know that talk is cheap. But the heat of the battle is as sweet as the victory.' , 'Bob Marley', "Nyururu",new Date(2020,8,22),0,0),
+    new Quote(4,'Yesterday is not ours to recover, but tomorrow is ours to win or lose.' , 'Lyndon B. Johnson', "Nyururu",new Date(2020,8,22),0,0),
+    new Quote(5,'Virtually nothing is impossible in this world if you just put your mind to it and maintain a positive attitude.', 'Lou Holtz', "Nyururu",new Date(2020,8,22),0,0),
+  ];
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+  quote.id = quoteLength+1;
+    quote.postingDate= new Date()
+    
+    if (quote.author === ''|| quote.author === '' || quote.blogger === ''){
+      alert('all fields are required!')
+    }else{
+      alert('Your Quote has been added Successfully')
+    this.quotes.push(quote);
+    
   }
-  receiveQuote(get){
-    get.timeCreated = new Date (get.timeCreated);
-    this.theQuotes.push(get);
-    console.log(this.theQuotes);
   }
-  public count = 0;
-
-  adding(index){
-    this.theQuotes[index].votes = this.theQuotes[index].votes + 1;
-    if (this.theQuotes[index].votes>this.count) {
-      this.count=this.theQuotes[index].votes;
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
     }
-    console.log(this.theQuotes[index].votes);
+    deleteQuote(isComplete, index){
+      if (isComplete) {
+        let toDelete = confirm(`Are you sure you want to delete this Quote?`)
+  
+        if (toDelete){
+          this.quotes.splice(index,1)
+        }
+    }
   }
-  removing(index){
-    if(this.theQuotes[index].votes > 0){
-      this.theQuotes[index].votes = this.theQuotes[index].votes - 1;
-    } else this.theQuotes[index].votes = 0;
-    console.log(this.theQuotes[index].votes);
-  }
-
   constructor() { }
 
-  ngOnInit() {
-    // this.myQuote.quote = "Remember no one can make you feel inferior without your consent.";
-    // this.myQuote.by= "Eleanor Roosevelt";
+  ngOnInit(): void {
   }
 
 }
