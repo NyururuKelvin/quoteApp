@@ -1,76 +1,29 @@
-/* .content {
-  background-image: url("/assets/wp2960877.jpg");
-  background-size: cover;
-  height: 100vh;
+.heading{
+  height: 10%;
+  width: 100%;
+  background-color: crimson;
 }
-
-h2{
-  color: bisque;
+h4{
+  color:RGB(0, 0, 128)
+}
+.quote{
+  border: 3px solid crimson;
+  padding: 10px;
+  margin: 15px;
   text-align: center;
-  margin-top: 20%;
 }
-
+h1{
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  color: rgb(2, 252, 252);
+}
+.main{
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
 .container-fluid{
-padding-left: 0;
-padding-right: 0;
+  background-color: whitesmoke;
 }
-
-.col {
-  padding: -4em 1.3em;
-}
-
-.text-uppercase {
-font-size: 30px;
-}
-
-.row p{
-text-align: center;
-font-size: medium;
-text-align: center;
-bottom: 10px;
-}
-
-.col-md-6{
-padding-bottom: 5rem
-}
-
-i {
-margin-bottom: 5px;
-}
-
-p{
-margin: 0;
-}
-
-.header {
-padding-top: 3rem;
-padding-bottom: 3rem;
-text-align: center;
-}
-
-.footer {
-background-color: black;
-padding: 1em 0em em 0em;
-text-align: center;
-color: white;
-max-height: 25vh;
-}
-
-.list-inline-item a {
-  margin-right: 10px;
-} 
-
-.list-inline{
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.form-quote{
-padding-top: 3rem;
-}
-
-.col-md-12{
-padding-left: 0;
-padding-right: 0;
-} */
