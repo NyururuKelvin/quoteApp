@@ -1,0 +1,11 @@
+.home{
+    background-image: url('/assets/wp2960877.jpg');
+    background-size: cover;
+    height: 80vh;
+  }
+
+  .unique{
+    text-align: center;
+    margin-top: 20%;
+    color: wheat;
+  }

@@ -1,11 +1,12 @@
 <p class="details">
-    Author: {{quote.author}} <br>
-    Posted by: {{quote.blogger}} 
-    </p>
-    <p>Posted ~{{quote.postingDate|dateCount}}~</p>
-    <div class="like">
-      <p id="like" ><span (click)="countLikeclick()"><img class="logo" src="/assets/40-406208_good-thumb-up-green-thumbs-up-emoji-hd.png"/></span> {{clickCounter}}</p>
-      <p id="dislike"><span (click)="countDislikeclick()"><img class="logo" src="/assets/this-free-icons-png-design-of-thumbs-down-circle-11562978783n37afzvdmb.png"/></span> {{clickCounter1}}</p>
-  
-    </div>
-   <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete</button>
+  Author: {{quote.author}} <br>
+  Posted by: {{quote.blogger}} 
+</p>
+<p>Posted ~{{quote.postingDate|dateCount}} days ago~</p>
+<div class="like">
+  <p id="like" ><span (click)="countLikeclick()"><img class="logo" src="/assets/40-406208_good-thumb-up-green-thumbs-up-emoji-hd.png"/></span> {{clickCounter}}</p>
+  <p id="dislike"><span (click)="countDislikeclick()"><img class="logo" src="/assets/this-free-icons-png-design-of-thumbs-down-circle-11562978783n37afzvdmb.png"/></span> {{clickCounter1}}</p>
+
+</div>
+<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete</button>
+   
