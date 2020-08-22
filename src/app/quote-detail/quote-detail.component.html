@@ -2,7 +2,7 @@
     Author: {{quote.author}} <br>
     Posted by: {{quote.blogger}} 
     </p>
-    <p>Posted {{quote.postingDate|dateCount}}</p>
+    <p>Posted ~{{quote.postingDate|dateCount}}~</p>
     <div class="like">
       <p id="like" ><span (click)="countLikeclick()"><img class="logo" src="./assets/like.png"/></span> {{clickCounter}}</p>
       <p id="dislike"><span (click)="countDislikeclick()"><img class="logo" src="./assets/dislike.png"/></span> {{clickCounter1}}</p>
