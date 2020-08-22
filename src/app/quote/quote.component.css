@@ -1,3 +1,15 @@
+.unique{
+  background-image: url('/assets/wp2960877.jpg');
+  background-size: cover;
+  height: 90vh;
+}
+
+h2{
+  color: wheat;
+  text-align: center;
+  margin-top: 30%;
+}
+
 .container-fluid{
     padding-left: 0;
     padding-right: 0;
