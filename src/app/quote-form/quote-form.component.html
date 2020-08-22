@@ -1,32 +1,30 @@
-<div class="form-entry">
-  <h2>INSPIRATIONAL QUOTES</h2>
+<div class="container">
+  <h2 class="text-center">CREATE A QUOTE</h2>
   <hr>
-  <div class="container">
-    <div class="row">
-      <form (ngSubmit)='getQuotes(quotesForm)' #quotesForm='ngForm'>
-        <div class="form-group">
-          <label for="theQuote">QUOTE:</label>
-          <textarea name="theQuote" placeholder="Enter your quote here" class="form-control" required [(ngModel)]='newQuote.theQuote' #theQuote='ngModel'></textarea>
-        </div>
-        <div class="form-group">
-          <label for="author">AUTHOR :</label>
-          <input type="text" name="author" placeholder="Author of quote" class="form-control" [(ngModel)]='newQuote.author' #author='ngModel'>
-        </div>
-        <div class="form-group">
-          <label for="person">BLOGGER :</label>
-          <input type="text" name="person" placeholder="What is your Name? " class="form-control" [(ngModel)]='newQuote.person' #person='ngModel'>
-        </div>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+          <div class="form-group">
 
-        <div class="form-group">
-          <label for="timeCreated"><span style="color: darkbrown">DATE</span></label>
-          <input type="date" class="form-control" id="timeCreated" [(ngModel)]="newQuote.timeCreated" name="timeCreated" #timeCreated="ngModel" required>
-  
-  
-          <div [hidden]="timeCreated.valid || timeCreated.pristine" class="alert alert-danger">
+              <label for="name">QUOTE</label>
+              <textarea class="form-control" id="name" rows="4"  [(ngModel)]="newQuote.name" name="name" required></textarea>
+              
           </div>
-        </div>
-  
-        <button type="submit" class="btn btn-success">CREATE</button>
+          <div class="form-group">
+
+              <label for="author">AUTHOR</label>
+              <input type="text" required class="form-control" [(ngModel)]="newQuote.author" id="author" name="author">
+
+          </div>
+          <div class="form-group">
+
+              <label for="blogger">BLOGGER</label>
+              <input type="text" required class="form-control" [(ngModel)]="newQuote.blogger" id="blogger" name="blogger">
+
+          </div>
+          
+          
+          <button type="submit" class="btn btn-success">Create</button>
       </form>
     </div>
   </div>
