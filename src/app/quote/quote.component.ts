@@ -36,7 +36,7 @@ export class QuoteComponent implements OnInit {
   //   by: String
   // }
 
-  theQuotes=[new Quote("Be humble for you are made of earth, Be noble for you are made of stars.","Amimo Matete","Me",new Date(2020,8,20))]
+  theQuotes=[new Quote('If opportunity doesn’t knock, build a door.',"Nyururu Kelvin","Me",new Date(2020,8,20))]
 
   deleteQuote(isComplete,index) {
     this.theQuotes.splice(index,1);
