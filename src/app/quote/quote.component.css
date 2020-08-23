@@ -27,3 +27,11 @@ h1{
 .container-fluid{
   background-color: whitesmoke;
 }
+
+.footer{
+  text-align: center;
+  background-color: crimson;
+  color: white;
+  padding: 5px;
+  font-size: medium;
+}
