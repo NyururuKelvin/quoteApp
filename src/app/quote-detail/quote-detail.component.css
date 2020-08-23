@@ -1,6 +1,7 @@
 button{
     background-color: rgb(209, 22, 22);
-    color: white; 
+    color: white;
+    margin: 5px;
  }
  .details{
      color: orchid;
