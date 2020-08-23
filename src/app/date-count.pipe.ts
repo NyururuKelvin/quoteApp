@@ -16,7 +16,7 @@ export class DateCountPipe implements PipeTransform {
     if (dateCounter >= 1 && todayWithNoTime > value){
       return (dateCounter + " Days ago");
     }else{
-      return 0;
+      return 'Today';
     }
   }
 }
