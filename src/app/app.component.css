@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
 .home{
-    background-image: url('/assets/images/wp2960877.jpg');
+    background-image: url('https://cdn2.vectorstock.com/i/1000x1000/79/06/quote-blank-template-quote-rectangle-vector-17647906.jpg');
     background-size: cover;
     height: 80vh;
   }
@@ -8,4 +10,6 @@
     text-align: center;
     margin-top: 20%;
     color: crimson;
+    font-family: 'Creepster', cursive;
+    font-size: xx-large;
   }
