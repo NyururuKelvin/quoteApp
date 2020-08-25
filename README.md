@@ -1,17 +1,17 @@
-# Quotes
+# quotesApp
 # Developer
 By Nyururu Kelvin 24th Aug 2020
 # Description
 A web application for a quotes, that will help people get inspiration and also inspire others through adding their own quotes. Users can also be able to upvote or downvote the quotes and the quote with the highest upvote will be highlighted.
 # Setup/installation Requirements
-Clone this repository Quotes
-cd to Quotes
-Navigate to index.html and open it on your favorite browser Your browser must be JavaScript and Angular enabled for this to work.
+* Clone this repository Quotes
+* cd to Quotes
+* Navigate to index.html and open it on your favorite browser Your browser must be JavaScript and Angular enabled for this to work.
 # Technologies used
-Angular
-HTML
-CSS
-Bootstrap
+* Angular
+* HTML
+* CSS
+* Bootstrap
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
