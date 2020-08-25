@@ -1,40 +1,45 @@
-# quotesApp
-# Developer
-By Nyururu Kelvin 24th Aug 2020
-# Description
+# quoteApp Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [license](#license)
+
+![GitHub Logo](/images/ReadMe.png)
+
+
+## Description
 A web application for a quotes, that will help people get inspiration and also inspire others through adding their own quotes. Users can also be able to upvote or downvote the quotes and the quote with the highest upvote will be highlighted.
-# Setup/installation Requirements
-* Clone this repository Quotes
-* cd to Quotes
-* Navigate to index.html and open it on your favorite browser Your browser must be JavaScript and Angular enabled for this to work.
-# Technologies used
-* Angular
-* HTML
-* CSS
-* Bootstrap
+	
+## Technologies
+The project is created with:
+* HTML:5 for giving the structure of the webpage.
+* CSS:3 for styling the webpage.
+* Bootstrap for more styling of the webpage.
+* JavaScript: Creation of responsive, interactive elements of the page, enhancing the user experience.
+	
+## Setup
+To run this project, use the live link in the GitHub repo:
+The live link to the project is provided below.
+[https://NyururuKelvin.github.io/quoteApp/]
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
-## Development server
+https://NyururuKelvin.github.io/quoteApp/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Contributing
+Pull requests are welcome. For any changes that one intends to make, please open an issue first to discuss what you would like to change.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Please make sure to update tests as appropriate.
 
-## Build
+## Author and acknowledgment
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+I would like to acknowledge the help and guidance of my Technical Mentor (TM) [Abdulfatah] in the creation of this project.
 
-## Running unit tests
+### Author 
+ Nyururu Kelvin is the author of this project. Contact information of the author [nyururukelvin9@gmail.com]
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Released under MIT License
 
-## Running end-to-end tests
+Copyright (c) 2020 Nyururu Kelvin.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[MIT](https://choosealicense.com/licenses/mit/)
